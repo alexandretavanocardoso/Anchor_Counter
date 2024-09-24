@@ -6,7 +6,6 @@ declare_id!("73eWZimCsEzFe3HhiryFq1G1EZWDUMj3rFaKumqnFTVi");
 pub mod anchor_counter {
     use super::*;
 
-
     pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
         let counter = &mut ctx.accounts.counter;
         counter.count = 0;
@@ -26,7 +25,7 @@ pub mod anchor_counter {
     pub fn decrement(ctx: Context<Update>) -> Result<()> {
         let counter = &mut ctx.accounts.counter;
         msg!("Previous counter: {}", counter.count);
-        counter.count = couter.count.checked_sub(1).unwrap_or(0);
+        counter.count = counter.count.checked_sub(1).unwrap_or(0);
         msg!("Counter decrement. Current count: {}", counter.count);
         Ok(())
     }

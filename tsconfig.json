@@ -6,5 +6,9 @@
     "module": "commonjs",
     "target": "es6",
     "esModuleInterop": true
-  }
+  },
+  "include": [
+    "src/**/*",  // ajuste conforme a estrutura do seu projeto
+    "test/**/*"  // inclua o diretório de testes, se necessário
+  ]
 }
